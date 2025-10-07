@@ -1,0 +1,14 @@
+flowchart TD
+  store_user_input["store_user_input (Start)"];
+  classify_request["classify_request"];
+  extract_tipo["extract_tipo"];
+  it_diagnose_executor["it_diagnose_executor"];
+  hr_executor["hr_executor"];
+  generic_message_executor["generic_message_executor"];
+  it_resolve_executor["it_resolve_executor"];
+  store_user_input --> classify_request;
+  classify_request --> extract_tipo;
+  extract_tipo --> it_diagnose_executor;
+  extract_tipo --> hr_executor;
+  extract_tipo --> generic_message_executor;
+  it_diagnose_executor --> it_resolve_executor;

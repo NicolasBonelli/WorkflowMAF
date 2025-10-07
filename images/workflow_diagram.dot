@@ -1,0 +1,19 @@
+digraph Workflow {
+  rankdir=TD;
+  node [shape=box, style=filled, fillcolor=lightblue];
+  edge [color=black, arrowhead=vee];
+
+  "store_user_input" [fillcolor=lightgreen, label="store_user_input\n(Start)"];
+  "classify_request" [label="classify_request"];
+  "extract_tipo" [label="extract_tipo"];
+  "it_diagnose_executor" [label="it_diagnose_executor"];
+  "hr_executor" [label="hr_executor"];
+  "generic_message_executor" [label="generic_message_executor"];
+  "it_resolve_executor" [label="it_resolve_executor"];
+  "store_user_input" -> "classify_request";
+  "classify_request" -> "extract_tipo";
+  "extract_tipo" -> "it_diagnose_executor";
+  "extract_tipo" -> "hr_executor";
+  "extract_tipo" -> "generic_message_executor";
+  "it_diagnose_executor" -> "it_resolve_executor";
+}
