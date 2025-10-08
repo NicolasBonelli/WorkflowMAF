@@ -21,12 +21,12 @@ The goal is to showcase how to orchestrate multiple agents that collaborate to h
 
 ```mermaid
 flowchart TD
-    A[👤 User] --> B[🤖 TypeClassifierAgent]
-    B --> C{SwitchNode(request_type)}
-    C -->|technical| D1[🧰 DiagnosticAgent]
-    D1 --> D2[🔧 SolutionAgent (uses a Tool)]
-    C -->|hr| E[🧾 HumanResourcesAgent]
-    C -->|other| F[💬 GenericMessageNode]
-    D2 --> G[(📤 Final Output)]
+    A[User] --> B[Type Classifier Agent]
+    B --> C{Switch Node<br/>(request_type)}
+    C -->|technical| D1[Diagnostic Agent]
+    D1 --> D2[Solution Agent<br/>(uses a Tool)]
+    C -->|hr| E[HR Agent]
+    C -->|other| F[Generic Message Node]
+    D2 --> G[Final Output]
     E --> G
     F --> G
