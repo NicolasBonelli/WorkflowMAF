@@ -19,14 +19,4 @@ The goal is to showcase how to orchestrate multiple agents that collaborate to h
 
 ## 🧩 Workflow Architecture
 
-```mermaid
-flowchart TD
-    A[User] --> B[Type Classifier Agent]
-    B --> C{Switch Node<br/>(request_type)}
-    C -->|technical| D1[Diagnostic Agent]
-    D1 --> D2[Solution Agent<br/>(uses a Tool)]
-    C -->|hr| E[HR Agent]
-    C -->|other| F[Generic Message Node]
-    D2 --> G[Final Output]
-    E --> G
-    F --> G
+![Sin título](https://github.com/user-attachments/assets/032510ee-99c4-4516-b488-f94e85cf657c)
